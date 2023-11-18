@@ -11,6 +11,7 @@ function createGrid() {
         for (let k = 0; k < 16; k++){
             const box = row.appendChild(document.createElement('div'));
             box.className = 'box';
+            box.id = `box_${k}`
         };
             
     };

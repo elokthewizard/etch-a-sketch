@@ -12,10 +12,14 @@
 }
 
 .box{
-    border: 1px solid blue;
+    border: 2px solid blue;
     justify-content: space-between;
     height: 50px;
     width: auto;
     margin: 0 auto;
     flex: 1 0;
 }
+
+.box[id^='box_']:hover {
+    background-color: yellow;
+  }
