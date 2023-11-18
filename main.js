@@ -1,14 +1,29 @@
+let gridSize = 16
+
 function createGrid() {
     const container = document.createElement('div');
     container.id = 'main';
     container.className = 'container';
 
-    for (let i = 0; i < 16; i++) {
+    const newGrid = document.createElement('button')
+    newGrid.id = 'newGrid'
+    newGrid.textContent = "New grid?"
+    container.appendChild(newGrid);
+
+    container.addEventListener('click', (e) => {
+        if (e.target.id = 'newGrid'){
+            gridSize = prompt('What dimensions? Enter one number, it will be used for both axis.');
+            
+            createGrid()
+        }
+    })
+
+    for (let i = 0; i < gridSize; i++) {
         const row = container.appendChild(document.createElement('div'));
         row.className = 'row';
         row.id = `row_${i}`
         
-        for (let k = 0; k < 16; k++){
+        for (let k = 0; k < gridSize; k++){
             const box = row.appendChild(document.createElement('div'));
             box.className = 'box';
             box.id = `box_${k}`
