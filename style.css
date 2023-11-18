@@ -1,24 +1,24 @@
 #main{
     max-width: 980px;
     margin: auto;
+    flex-shrink: 0;
 }
 
 .row{
     display: flex;
-    border: 2px solid red;
-    justify-content: space-between;
-    height: 50px;
-    width: auto;
 }
 
 .box{
-    border: 2px solid blue;
+    border: 1px solid blue;
     justify-content: space-between;
     height: 50px;
-    width: auto;
-    margin: 0 auto;
+    margin: auto 0;
     flex: 1 0;
 }
+
+.persistent-hover {
+    background-color: yellow;
+  }
 
 .box[id^='box_']:hover {
     background-color: yellow;

@@ -29,3 +29,16 @@ link.type = 'text/css';
 link.href = 'style.css';
 
 head.appendChild(link);
+
+let boxes = document.querySelectorAll('.box');
+
+    boxes.forEach(function(box) {
+      box.addEventListener('mouseover', function() {
+        box.classList.add('persistent-hover');
+      });
+
+      box.addEventListener('mouseout', function() {
+        // Uncomment the line below if you want to revert to the original state
+        // box.classList.remove('persistent-hover');
+      });
+    });
