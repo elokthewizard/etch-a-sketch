@@ -52,11 +52,12 @@ function createGrid() {
     container.addEventListener('click', (e) => {
         if (e.target.id = 'newGrid'){
             gridSize = prompt('What dimensions? Enter one number, it will be used for both axis.');
+            
             while (body.firstChild){
                 body.removeChild(body.firstChild)
             }
-            
             createGrid();
+
         };
     });
 };

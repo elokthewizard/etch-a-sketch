@@ -1,19 +1,21 @@
-#main{
-    max-width: 980px;
-    margin: auto;
-    flex-shrink: 0;
-}
 
+#main{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    max-width: 980px;
+}
 .row{
     display: flex;
+    max-width: 980px;
 }
 
 .box{
     border: 1px solid blue;
-    justify-content: space-between;
     height: 50px;
-    margin: auto 0;
-    flex: 1 0;
+    width: 50px;
+
 }
 
 .persistent-hover {
