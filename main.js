@@ -38,9 +38,16 @@ function createGrid() {
 
     let boxes = document.querySelectorAll('.box');
 
+    const getRGB = function(){
+        const r = Math.round(Math.random()*256);
+        const b = Math.round(Math.random()*256)
+        const g = Math.round(Math.random()*256)
+        return `rgb(${r}, ${g}, ${b})`
+    }
+
     boxes.forEach(function(box) {
         box.addEventListener('mouseover', function() {
-            box.classList.add('persistent-hover');
+            box.style.backgroundColor = getRGB();
         });
 
         box.addEventListener('mouseout', function() {

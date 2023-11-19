@@ -8,13 +8,12 @@
 }
 .row{
     display: flex;
-    max-width: 980px;
 }
 
 .box{
     border: 1px solid blue;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
 
 }
 
