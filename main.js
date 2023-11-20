@@ -5,15 +5,21 @@ let gridSize = 16
 const body = document.querySelector('body')
 
 function createGrid() {
+    const buttonSpot = document.createElement('div');
+    buttonSpot.id = 'reset';
+    buttonSpot.className = 'button';
+    document.body.appendChild(buttonSpot);
+
     const container = document.createElement('div');
     container.id = 'main';
     container.className = 'container';
     document.body.appendChild(container);
 
+
     const newGrid = document.createElement('button')
     newGrid.id = 'newGrid'
     newGrid.textContent = "New grid?"
-    container.appendChild(newGrid);
+    buttonSpot.appendChild(newGrid);
 
     for (let i = 0; i < gridSize; i++) {
         const row = container.appendChild(document.createElement('div'));
@@ -63,7 +69,8 @@ function createGrid() {
             while (body.firstChild){
                 body.removeChild(body.firstChild)
             };
-            createGrid();
+        
+        createGrid();
             
         };  
         
