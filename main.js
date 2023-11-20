@@ -1,9 +1,4 @@
-let head = document.getElementsByTagName('HEAD')[0];
-let link = document.createElement('link');
 
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = 'style.css';
 
 
 let gridSize = 16
@@ -13,6 +8,7 @@ function createGrid() {
     const container = document.createElement('div');
     container.id = 'main';
     container.className = 'container';
+    document.body.appendChild(container);
 
     const newGrid = document.createElement('button')
     newGrid.id = 'newGrid'
@@ -32,18 +28,21 @@ function createGrid() {
             
     };
 
-    document.body.appendChild(container);
-
+    let head = document.getElementsByTagName('HEAD')[0];
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'style.css'
     head.appendChild(link);
-
-    let boxes = document.querySelectorAll('.box');
 
     const getRGB = function(){
         const r = Math.round(Math.random()*256);
         const b = Math.round(Math.random()*256)
         const g = Math.round(Math.random()*256)
         return `rgb(${r}, ${g}, ${b})`
-    }
+    };
+
+    let boxes = document.querySelectorAll('.box');
 
     boxes.forEach(function(box) {
         box.addEventListener('mouseover', function() {
@@ -56,16 +55,19 @@ function createGrid() {
         });
     });
 
-    container.addEventListener('click', (e) => {
+    newGrid.addEventListener('click', (e) => {
         if (e.target.id = 'newGrid'){
+            e.stopPropagation();
             gridSize = prompt('What dimensions? Enter one number, it will be used for both axis.');
             
             while (body.firstChild){
                 body.removeChild(body.firstChild)
-            }
+            };
             createGrid();
-
-        };
+            
+        };  
+        
+        
     });
 };
 

@@ -1,10 +1,11 @@
 
 #main{
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     max-width: 980px;
+    max-height: 980px;
 }
 .row{
     display: flex;
@@ -14,13 +15,13 @@
     border: 1px solid blue;
     height: 25px;
     width: 25px;
-
 }
 
+/* old hover style, could be used as a ref for a later feature?
 .persistent-hover {
     background-color: yellow;
   }
 
 .box[id^='box_']:hover {
     background-color: yellow;
-  }
+  } */
