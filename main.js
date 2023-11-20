@@ -63,18 +63,23 @@ function createGrid() {
 
     newGrid.addEventListener('click', (e) => {
         if (e.target.id = 'newGrid'){
+
             e.stopPropagation();
-            gridSize = prompt('What dimensions? Enter one number, it will be used for both axis.');
             
+            do {
+                gridSize = prompt('What dimensions? Enter one number, it will be used for both axis.');
+                
+                if (parseInt(gridSize) > 100){
+                    alert("Please choose a number less than or equal to 100.")
+                }
+                
+            } while (gridSize > 100);
+           
             while (body.firstChild){
                 body.removeChild(body.firstChild)
             };
-        
-        createGrid();
-            
+            createGrid();   
         };  
-        
-        
     });
 };
 
