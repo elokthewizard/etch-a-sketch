@@ -10,21 +10,22 @@ body{
     align-items: center;
     width: 980px;
     height: 980px;
-    flex: 1 1 0;
     
 }
 .row{
     display: flex;
-    max-width: 980px;
-    min-height: 9.8px;
-    flex: 1 1 0;
+    flex: 1;
+    
 }
 
 .box{
     border: skyblue solid 1px;
-    height: 4em;
-    width: 4em;
-    flex: 1 1 0;
+    flex: 1;
+    min-height: 9.8px;
+    min-width: 9.8px;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1;
 }
 
 /* old hover style, could be used as a ref for a later feature?
